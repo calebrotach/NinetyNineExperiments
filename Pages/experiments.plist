@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>experiments</key>
+	<array>
+		<dict>
+			<key>title</key>
+			<string>Title 1</string>
+			<key>body</key>
+			<string>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique finibus viverra. </string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Title 2</string>
+			<key>body</key>
+			<string>Sed viverra nisl purus, vitae tristique ipsum tincidunt a. Aliquam erat volutpat. Curabitur nisl arcu.</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Title 3</string>
+			<key>body</key>
+			<string>Praesent nec massa nec diam malesuada accumsan. In mollis massa nec ultrices ornare. </string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Title 4</string>
+			<key>body</key>
+			<string>Morbi euismod egestas odio, sit amet imperdiet odio sollicitudin a. </string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Title 5</string>
+			<key>body</key>
+			<string>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis sollicitudin lacus. Vivamus sed ante quam. Vivamus est lacus, facilisis a augue quis, tincidunt eleifend ligula. Nunc molestie mauris non commodo laoreet. </string>
+		</dict>
+	</array>
+</dict>
+</plist>
