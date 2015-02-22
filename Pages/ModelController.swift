@@ -14,6 +14,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
                 experiments.addObjectsFromArray(dict.objectForKey("experiments") as NSArray)
             }
         }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetArray", name: mySpecialNotificationKey, object: nil)
     }
     
     func resetArray() {
