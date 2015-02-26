@@ -3,8 +3,6 @@ import UIKit
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
     var experiments = NSMutableArray()
-    
-    
 
     override init() {
         super.init()
@@ -46,9 +44,6 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         dataViewController.experiment = self.experiments[index] as? NSDictionary
         
         
-        
-        experiments.removeObjectAtIndex(index)
-        
         return dataViewController
     }
 
@@ -74,14 +69,30 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
 
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
+//        var lastExperiment: DataViewController? = DataViewController()
+//        
+//        lastExperiment = nil
+        
+        
         
         if (experiments.count == 0) {
             return nil
         }
         
+        if removeExperiment == true {
+            experiments.removeObjectAtIndex(currentIndex)
+            removeExperiment = false
+        }
+
+        
         let index = Int(arc4random_uniform(UInt32(experiments.count)))
         
-        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+        let currentExperiment = self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+        
+        
+//        lastExperiment = currentExperiment
+        
+        return currentExperiment
     }
 
 }

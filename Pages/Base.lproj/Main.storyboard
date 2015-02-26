@@ -124,6 +124,15 @@
                                     <segue destination="ujE-lv-rhy" kind="unwind" unwindAction="closeModal:" id="hoi-tu-SI6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgG-bu-g3Z">
+                                <rect key="frame" x="75" y="143" width="139" height="30"/>
+                                <state key="normal" title="Remove Experiment">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ujE-lv-rhy" kind="unwind" unwindAction="removeExperimentSegue:" id="cZq-Lz-77b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

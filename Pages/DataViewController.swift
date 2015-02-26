@@ -1,5 +1,9 @@
 import UIKit
 
+var removeExperiment = false
+var currentIndex = 0
+
+
 class DataViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -11,9 +15,19 @@ class DataViewController: UIViewController {
     
     @IBOutlet weak var brRightLine: UIImageView!
     @IBOutlet weak var brLeftLine: UIImageView!
+    
     @IBAction func closeModal(segue:UIStoryboardSegue) {
         
     }
+    
+    @IBAction func removeExperimentSegue(segue:UIStoryboardSegue) {
+        
+        removeExperiment = true
+        
+    }
+
+    
+    
     
   
     
@@ -34,6 +48,9 @@ class DataViewController: UIViewController {
             self.titleLabel!.text = ""
             self.bodyLabel!.text = ""
         }
+        
+        println(removeExperiment)
+        
         
     }
 
