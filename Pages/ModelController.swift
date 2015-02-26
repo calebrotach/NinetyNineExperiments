@@ -3,11 +3,15 @@ import UIKit
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
     var experiments = NSMutableArray()
+    var menuIndex = 0
+    
+    
 
     override init() {
         super.init()
         // Create the data model.
-        if let path = NSBundle.mainBundle().pathForResource("experiments", ofType: "plist") {
+        
+                if let path = NSBundle.mainBundle().pathForResource("experiments", ofType: "plist") {
             if let dict = NSDictionary(contentsOfFile: path) {
                 experiments.addObjectsFromArray(dict.objectForKey("experiments") as NSArray)
             }
@@ -22,6 +26,20 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             }
         }
     }
+//    func shuffleArray<T>(array: Array<T>) -> Array<T>
+//    {
+//        for var index = array.count - 1; index > 0; index--
+//        {
+//            // Random int from 0 to index-1
+//            var j = Int(arc4random_uniform(UInt32(index-1)))
+//            
+//            // Swap two array elements
+//            // Notice '&' required as swap uses 'inout' parameters
+//            swap(&array[index], &array[j])
+//        }
+//        return array
+//    }
+
     
     func menuController (storyboard: UIStoryboard) -> UIViewController {
         
@@ -57,11 +75,16 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
 //
         println(experiments.count)
 //        println(experiments[experiments.count - 1])
-//        
+//      
+        if (menuIndex == 1) {
+            return nil
+        }
+
 //        
 //        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
-    
+        menuIndex = 1
         return self.menuController(viewController.storyboard!)
+        
 
         
         
@@ -73,7 +96,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
 //        
 //        lastExperiment = nil
         
-        
+        menuIndex = 0
         
         if (experiments.count == 0) {
             return nil
