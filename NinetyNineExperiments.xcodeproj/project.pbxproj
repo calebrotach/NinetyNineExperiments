@@ -30,6 +30,7 @@
 		5985EF551A8A36DD00F48893 /* BR_right_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BR_right_line.png; sourceTree = "<group>"; };
 		5985EF561A8A36DD00F48893 /* TL_left_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TL_left_line.png; sourceTree = "<group>"; };
 		5985EF571A8A36DD00F48893 /* TL_right_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TL_right_line.png; sourceTree = "<group>"; };
+		59E141441AA49C1F0017E8F6 /* ShuffleArray.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ShuffleArray.playground; sourceTree = "<group>"; };
 		A336A5E61A80C1480032E14E /* NinetyNineExperiments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NinetyNineExperiments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A336A5EA1A80C1480032E14E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A336A5EB1A80C1480032E14E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 				A336A5EF1A80C1480032E14E /* DataViewController.swift */,
 				597B9E771A9562610017C13A /* ModalView.swift */,
 				A336A5F11A80C1480032E14E /* ModelController.swift */,
+				59E141441AA49C1F0017E8F6 /* ShuffleArray.playground */,
 				5985EF541A8A36DD00F48893 /* BR_left_line.png */,
 				5985EF551A8A36DD00F48893 /* BR_right_line.png */,
 				5985EF561A8A36DD00F48893 /* TL_left_line.png */,

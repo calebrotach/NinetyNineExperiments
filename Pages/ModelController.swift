@@ -5,7 +5,19 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     var experiments = NSMutableArray()
     var menuIndex = 0
     
-    
+    func shuffleArray(inout array: NSMutableArray) -> NSMutableArray
+    {
+        for var index = array.count - 1; index > 0; index--
+        {
+            // Random int from 0 to index-1
+            var j = Int(arc4random_uniform(UInt32(index-1)))
+            
+            // Swap two array elements
+            // Notice '&' required as swap uses 'inout' parameters
+            swap(&array[index], &array[j])
+        }
+        return array
+    }
 
     override init() {
         super.init()
@@ -16,6 +28,13 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
                 experiments.addObjectsFromArray(dict.objectForKey("experiments") as NSArray)
             }
         }
+        
+        println(experiments)
+        
+        shuffleArray(&experiments)
+        
+        println(experiments)
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetArray", name: mySpecialNotificationKey, object: nil)
     }
     
@@ -25,21 +44,15 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
                 experiments.addObjectsFromArray(dict.objectForKey("experiments") as NSArray)
             }
         }
-    }
-//    func shuffleArray<T>(array: Array<T>) -> Array<T>
-//    {
-//        for var index = array.count - 1; index > 0; index--
-//        {
-//            // Random int from 0 to index-1
-//            var j = Int(arc4random_uniform(UInt32(index-1)))
-//            
-//            // Swap two array elements
-//            // Notice '&' required as swap uses 'inout' parameters
-//            swap(&array[index], &array[j])
-//        }
-//        return array
-//    }
+        
+        println(experiments)
+        
+        shuffleArray(&experiments)
+        
+        println(experiments)
 
+    }
+    
     
     func menuController (storyboard: UIStoryboard) -> UIViewController {
         
