@@ -23,8 +23,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Body" lineBreakMode="wordWrap" numberOfLines="40" baselineAdjustment="none" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="sxO-Wi-WLI">
-                                <rect key="frame" x="45" y="127" width="285" height="327"/>
+                            <label opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Body" lineBreakMode="wordWrap" numberOfLines="40" baselineAdjustment="none" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="sxO-Wi-WLI">
+                                <rect key="frame" x="45" y="192" width="285" height="327"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,8 +52,15 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYs-w1-Iwr">
+                                <rect key="frame" x="42" y="192" width="311" height="363"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="a4F-Wq-f2I" firstAttribute="top" secondItem="NlB-Cl-4z0" secondAttribute="bottom" constant="70" id="5UB-zg-ANl"/>
                             <constraint firstItem="Gj0-uO-CUC" firstAttribute="leading" secondItem="gLe-Tb-ylt" secondAttribute="leadingMargin" constant="230" id="Mkw-6e-Bla"/>
@@ -64,6 +71,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="bodyLabel" destination="sxO-Wi-WLI" id="F1f-VJ-LV7"/>
+                        <outlet property="bodyTest" destination="sYs-w1-Iwr" id="7Bn-VR-m9R"/>
                         <outlet property="brLeftLine" destination="Gj0-uO-CUC" id="W72-MG-L26"/>
                         <outlet property="brRightLine" destination="NlB-Cl-4z0" id="ZY5-Je-1Pm"/>
                         <outlet property="titleLabel" destination="i7n-lc-4In" id="RJy-j5-blx"/>
@@ -73,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHE-GN-Yf3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1289.5" y="475.5"/>
+            <point key="canvasLocation" x="1289" y="475"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="3GU-QQ-JyJ">

@@ -11,7 +11,15 @@ import UIKit
 
 let mySpecialNotificationKey = "com.example.specialNotificationKey"
 
+var fromMenu = false
+
+protocol MenuViewControllerDelegate {
+    func didVisit(fromMenu: Bool)
+}
+
 class MenuViewController: UIViewController {
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetArray", name: mySpecialNotificationKey, object: nil)
@@ -25,4 +33,8 @@ class MenuViewController: UIViewController {
         println("done")
     }
     
+    
 }
+
+
+

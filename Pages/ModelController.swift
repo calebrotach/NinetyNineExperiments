@@ -44,14 +44,19 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
                 experiments.addObjectsFromArray(dict.objectForKey("experiments") as NSArray)
             }
         }
-        
-        println(experiments)
-        
         shuffleArray(&experiments)
-        
-        println(experiments)
-
     }
+    
+    func indexOfViewController(viewController: DataViewController) -> Int {
+        // Return the index of the given data view controller.
+        // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
+        if let experiment: AnyObject = viewController.experiment {
+            return self.experiments.indexOfObject(experiment)
+        } else {
+            return NSNotFound
+        }
+    }
+
     
     
     func menuController (storyboard: UIStoryboard) -> UIViewController {
@@ -68,67 +73,49 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         if (self.experiments.count == 0) || (index >= self.experiments.count) {
             return nil
         }
-        
 
         // Create a new view controller and pass suitable data.
         let dataViewController = storyboard.instantiateViewControllerWithIdentifier("DataViewController") as DataViewController
         dataViewController.experiment = self.experiments[index] as? NSDictionary
         
-        
         return dataViewController
     }
+    
 
     // MARK: - Page View Controller Data Source
 
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-        
-        
-//So here we need to create an array that increments once and then saves. Then we see if there is anything there. If there is we don't let you pass.
-//
-        println(experiments.count)
-//        println(experiments[experiments.count - 1])
-//      
         if (menuIndex == 1) {
             return nil
         }
-
-//        
-//        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
         menuIndex = 1
+        
         return self.menuController(viewController.storyboard!)
-        
-
-        
-        
     }
+    
+    
 
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
-//        var lastExperiment: DataViewController? = DataViewController()
-//        
-//        lastExperiment = nil
-        
-        menuIndex = 0
-        
-        if (experiments.count == 0) {
-            return nil
+        if fromMenu == true {
+            var index = self.indexOfViewController(viewController as DataViewController)
+            if index == NSNotFound {
+                return nil
+            }
+            
+            index++
+            if index == self.experiments.count {
+                return nil
+            }
+            return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+        } else {
+            println("fromMenu is \(fromMenu)")
+            fromMenu = true
+            return self.viewControllerAtIndex(0, storyboard: viewController.storyboard!)
         }
         
-        if removeExperiment == true {
-            experiments.removeObjectAtIndex(currentIndex)
-            removeExperiment = false
-        }
-
         
-        let index = Int(arc4random_uniform(UInt32(experiments.count)))
-        
-        let currentExperiment = self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
-        
-        
-//        lastExperiment = currentExperiment
-        
-        return currentExperiment
     }
 
 }

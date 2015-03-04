@@ -16,6 +16,7 @@ class DataViewController: UIViewController {
     @IBOutlet weak var brRightLine: UIImageView!
     @IBOutlet weak var brLeftLine: UIImageView!
     
+    @IBOutlet weak var bodyTest: UITextView!
     @IBAction func closeModal(segue:UIStoryboardSegue) {
         
     }
@@ -25,6 +26,7 @@ class DataViewController: UIViewController {
         removeExperiment = true
         
     }
+    
 
     
     
@@ -42,7 +44,7 @@ class DataViewController: UIViewController {
                 self.titleLabel!.text = title
             }
             if let body = dict.objectForKey("body") as? String {
-                self.bodyLabel!.text = body
+                self.bodyTest!.text = body
             }
         } else {
             self.titleLabel!.text = ""
