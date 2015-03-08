@@ -86,12 +86,14 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
 
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-        if (menuIndex == 1) {
+        var index = self.indexOfViewController(viewController as DataViewController)
+        if (index == 0) || (index == NSNotFound) {
             return nil
         }
-        menuIndex = 1
         
-        return self.menuController(viewController.storyboard!)
+        index--
+        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+
     }
     
     
@@ -103,10 +105,18 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             if index == NSNotFound {
                 return nil
             }
+            if removeExperiment == true {
+                if index == 0 {
+                    experiments.removeObjectAtIndex(experiments.count - 1)
+                } else {
+                    experiments.removeObjectAtIndex(index)
+                }
+                removeExperiment = false
+            }
             
             index++
             if index == self.experiments.count {
-                return nil
+                index = 0
             }
             return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
         } else {

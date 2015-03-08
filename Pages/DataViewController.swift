@@ -1,7 +1,7 @@
 import UIKit
 
 var removeExperiment = false
-var currentIndex = 0
+
 
 
 class DataViewController: UIViewController {
@@ -26,6 +26,13 @@ class DataViewController: UIViewController {
         removeExperiment = true
         
     }
+    
+    @IBAction func closeMenu(segue:UIStoryboardSegue) {
+        
+    }
+
+    
+    
     
 
     

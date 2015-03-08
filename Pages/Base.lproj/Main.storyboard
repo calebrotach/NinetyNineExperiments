@@ -43,9 +43,12 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-YC-jPk">
                                 <rect key="frame" x="184" y="549" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Delete this Experiment">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="130" y="549" width="155" height="30"/>
+                                </variation>
                                 <connections>
                                     <segue destination="VNh-Nv-0Lf" kind="popoverPresentation" popoverAnchorView="dt4-YC-jPk" id="GaZ-oh-v09">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -59,6 +62,18 @@
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPi-J9-53v">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="tsunami2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="304" y="20" width="326" height="56"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="ySD-0M-FYj" kind="presentation" id="Pbg-Kv-7e4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -67,6 +82,16 @@
                             <constraint firstAttribute="bottom" secondItem="Gj0-uO-CUC" secondAttribute="bottom" constant="-30" id="mPR-to-wh1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NlB-Cl-4z0" secondAttribute="trailing" constant="-50" id="zSo-JR-amT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="TPi-J9-53v"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="TPi-J9-53v"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -81,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHE-GN-Yf3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1289" y="475"/>
+            <point key="canvasLocation" x="1831.5" y="486"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="3GU-QQ-JyJ">
@@ -119,6 +144,9 @@
                                 <state key="normal" title="Tweet-pitch your story">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="131" y="322" width="153" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="tweetButton:" destination="VNh-Nv-0Lf" eventType="touchUpInside" id="0wQ-Wu-wMv"/>
                                 </connections>
@@ -137,6 +165,9 @@
                                 <state key="normal" title="Remove Experiment">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="131" y="191" width="139" height="30"/>
+                                </variation>
                                 <connections>
                                     <segue destination="ujE-lv-rhy" kind="unwind" unwindAction="removeExperimentSegue:" id="cZq-Lz-77b"/>
                                 </connections>
@@ -150,6 +181,82 @@
                 <exit id="ujE-lv-rhy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1289" y="-384"/>
+        </scene>
+        <!--Additional Menu View Controller-->
+        <scene sceneID="diP-Js-AmI">
+            <objects>
+                <viewController id="ySD-0M-FYj" customClass="AdditionalMenuViewController" customModule="NinetyNineExperiments" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bmi-xI-Kd1"/>
+                        <viewControllerLayoutGuide type="bottom" id="MNz-ZA-lGf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gWx-5I-pMV">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q8-KR-51R">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="180" y="201" width="44" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-2E-zKB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="About Revolver">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="161" y="518" width="105" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMb-GZ-qDE">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="178" y="59" width="48" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Ylg-if-9Jp" kind="unwind" unwindAction="closeMenu:" id="K1E-4d-v97"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOJ-dv-BSV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="178" y="421" width="46" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="1Q8-KR-51R"/>
+                                <exclude reference="Lvf-2E-zKB"/>
+                                <exclude reference="AMb-GZ-qDE"/>
+                                <exclude reference="zOJ-dv-BSV"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="1Q8-KR-51R"/>
+                                <include reference="Lvf-2E-zKB"/>
+                                <include reference="AMb-GZ-qDE"/>
+                                <include reference="zOJ-dv-BSV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u0m-sV-W3C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ylg-if-9Jp" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2002.5" y="-384"/>
         </scene>
         <!--MenuViewController-->
         <scene sceneID="uGP-8l-ab2">
@@ -190,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNO-N1-ClK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="486"/>
+            <point key="canvasLocation" x="916.5" y="486"/>
         </scene>
     </scenes>
     <resources>
@@ -198,5 +305,6 @@
         <image name="BR_right_line.png" width="2" height="58"/>
         <image name="TL_left_line.png" width="71" height="2"/>
         <image name="TL_right_line.png" width="2" height="58"/>
+        <image name="tsunami2.png" width="64" height="64"/>
     </resources>
 </document>
