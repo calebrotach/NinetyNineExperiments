@@ -4,6 +4,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
 
     var pageViewController: UIPageViewController?
     var refreshControl:UIRefreshControl!
+//    @IBAction func
 
     override func viewDidLoad() {
         super.viewDidLoad()

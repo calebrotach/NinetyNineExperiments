@@ -25,6 +25,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         
                 if let path = NSBundle.mainBundle().pathForResource("experiments", ofType: "plist") {
             if let dict = NSDictionary(contentsOfFile: path) {
+                
                 experiments.addObjectsFromArray(dict.objectForKey("experiments") as NSArray)
             }
         }
@@ -41,10 +42,12 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     func resetArray() {
         if let path = NSBundle.mainBundle().pathForResource("experiments", ofType: "plist") {
             if let dict = NSDictionary(contentsOfFile: path) {
+                experiments.removeAllObjects()
                 experiments.addObjectsFromArray(dict.objectForKey("experiments") as NSArray)
             }
         }
         shuffleArray(&experiments)
+        println(experiments)
     }
     
     func indexOfViewController(viewController: DataViewController) -> Int {
@@ -87,9 +90,12 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
         var index = self.indexOfViewController(viewController as DataViewController)
-        if (index == 0) || (index == NSNotFound) {
+        if (index == NSNotFound) {
             return nil
         }
+//        if (index == 0) {
+//            index = experiments.count - 1
+//        }
         
         index--
         return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
@@ -103,7 +109,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         if fromMenu == true {
             var index = self.indexOfViewController(viewController as DataViewController)
             if index == NSNotFound {
-                return nil
+                index = 0
             }
             if removeExperiment == true {
                 if index == 0 {
@@ -118,6 +124,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             if index == self.experiments.count {
                 index = 0
             }
+//            println(experiments)
             return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
         } else {
             println("fromMenu is \(fromMenu)")

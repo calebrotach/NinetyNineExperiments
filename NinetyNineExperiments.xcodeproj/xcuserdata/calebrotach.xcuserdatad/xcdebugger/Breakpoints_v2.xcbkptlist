@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pages/RootViewController.swift"
-            timestampString = "446091350.411894"
+            timestampString = "447637837.562453"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -86,11 +86,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pages/ModelController.swift"
-            timestampString = "447079727.006511"
+            timestampString = "447681649.498841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "menuController(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -102,41 +102,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pages/ModelController.swift"
-            timestampString = "447541666.983776"
+            timestampString = "447682807.069036"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NinetyNineExperiments.ModelController.pageViewController (NinetyNineExperiments.ModelController)(ObjectiveC.UIPageViewController, viewControllerAfterViewController : ObjectiveC.UIViewController) -&gt; Swift.Optional&lt;ObjectiveC.UIViewController&gt;"
-                  moduleName = "NinetyNineExperiments"
-                  urlString = "file:///Users/calebrotach/Documents/Tinkering/NinetyNineExperiments/Pages/ModelController.swift"
-                  timestampString = "447034210.382947"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "135"
-                  endingLineNumber = "135"
-                  offsetFromSymbolStart = "777">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NinetyNineExperiments.ModelController.pageViewController (NinetyNineExperiments.ModelController)(ObjectiveC.UIPageViewController, viewControllerAfterViewController : ObjectiveC.UIViewController) -&gt; Swift.Optional&lt;ObjectiveC.UIViewController&gt;"
-                  moduleName = "NinetyNineExperiments"
-                  urlString = "file:///Users/calebrotach/Documents/Tinkering/NinetyNineExperiments/Pages/ModelController.swift"
-                  timestampString = "447034210.383086"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "135"
-                  endingLineNumber = "135"
-                  offsetFromSymbolStart = "1072">
-               </Location>
-            </Locations>
+            startingLineNumber = "139"
+            endingLineNumber = "139">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pages/ModelController.swift"
+            timestampString = "447682807.069036"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "ModelController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

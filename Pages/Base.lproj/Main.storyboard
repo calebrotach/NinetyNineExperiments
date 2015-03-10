@@ -191,6 +191,7 @@
                         <viewControllerLayoutGuide type="bottom" id="MNz-ZA-lGf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gWx-5I-pMV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q8-KR-51R">
@@ -231,6 +232,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="178" y="421" width="46" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="notify" destination="ySD-0M-FYj" eventType="touchUpInside" id="dlq-R4-oLw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
