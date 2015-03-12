@@ -93,9 +93,9 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         if (index == NSNotFound) {
             return nil
         }
-//        if (index == 0) {
-//            index = experiments.count - 1
-//        }
+        if (index == 0) {
+            index = experiments.count - 1
+        }
         
         index--
         return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
