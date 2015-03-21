@@ -48,35 +48,6 @@
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dt4-YC-jPk">
-                                <rect key="frame" x="184" y="549" width="46" height="30"/>
-                                <state key="normal" title="Delete this Experiment" image="Other Done Button.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="218" y="545" width="335" height="41"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="VNh-Nv-0Lf" kind="popoverPresentation" popoverAnchorView="dt4-YC-jPk" id="GaZ-oh-v09">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPi-J9-53v">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <accessibility key="accessibilityConfiguration" label="Home">
-                                    <accessibilityTraits key="traits" none="YES" button="YES" link="YES"/>
-                                </accessibility>
-                                <state key="normal" title="Home" image="Home Button.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="42" y="545" width="156" height="41"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="ySD-0M-FYj" kind="presentation" id="Pbg-Kv-7e4"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -85,16 +56,6 @@
                             <constraint firstAttribute="bottom" secondItem="Gj0-uO-CUC" secondAttribute="bottom" constant="-30" id="mPR-to-wh1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NlB-Cl-4z0" secondAttribute="trailing" constant="-50" id="zSo-JR-amT"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="TPi-J9-53v"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="TPi-J9-53v"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -277,30 +238,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testing " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkK-YG-f8X">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TL_right_line.png" translatesAutoresizingMaskIntoConstraints="NO" id="0au-3j-xmw">
+                                <rect key="frame" x="42" y="-21" width="1" height="50"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="349" y="-8" width="1" height="50"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TL_left_line.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zpo-8h-Lu6">
+                                <rect key="frame" x="-3" y="133" width="30" height="1"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="383" y="123" width="30" height="1"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="92" placeholderIntrinsicHeight="1" image="BR_left_line.png" translatesAutoresizingMaskIntoConstraints="NO" id="edA-IF-r0S">
+                                <rect key="frame" x="296" y="512" width="92" height="1"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-27" y="637" width="92" height="1"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="50" image="BR_right_line.png" translatesAutoresizingMaskIntoConstraints="NO" id="YcF-rg-Dwo">
+                                <rect key="frame" x="206.5" y="684" width="1" height="50"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="102" y="693" width="1" height="50"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99 Experiments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkK-YG-f8X">
                                 <rect key="frame" x="177" y="357" width="59.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Marion-Regular" family="Marion" pointSize="35"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="124" y="88" width="251" height="93.5"/>
+                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoO-yv-STX">
-                                <rect key="frame" x="162" y="515" width="90" height="30"/>
-                                <state key="normal" title="Reset Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myv-Up-2s2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="242" y="515" width="90" height="30"/>
+                                    <rect key="frame" x="226" y="331" width="46" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="notify" destination="b51-Pp-sqN" eventType="touchUpInside" id="YTo-Xo-OVR"/>
-                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlr-lh-WS3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="226" y="420" width="107" height="47"/>
+                                </variation>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="DkK-YG-f8X" secondAttribute="centerY" id="I2L-gF-FPs"/>
-                            <constraint firstAttribute="centerX" secondItem="DkK-YG-f8X" secondAttribute="centerX" id="f4s-Xq-wTV"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="0au-3j-xmw"/>
+                                <exclude reference="Zpo-8h-Lu6"/>
+                                <exclude reference="edA-IF-r0S"/>
+                                <exclude reference="YcF-rg-Dwo"/>
+                                <exclude reference="Myv-Up-2s2"/>
+                                <exclude reference="dlr-lh-WS3"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="0au-3j-xmw"/>
+                                <include reference="Zpo-8h-Lu6"/>
+                                <include reference="edA-IF-r0S"/>
+                                <include reference="YcF-rg-Dwo"/>
+                                <include reference="Myv-Up-2s2"/>
+                                <include reference="dlr-lh-WS3"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -313,8 +323,6 @@
     <resources>
         <image name="BR_left_line.png" width="71" height="2"/>
         <image name="BR_right_line.png" width="2" height="58"/>
-        <image name="Home Button.png" width="154" height="41"/>
-        <image name="Other Done Button.png" width="153" height="41"/>
         <image name="TL_left_line.png" width="71" height="2"/>
         <image name="TL_right_line.png" width="2" height="58"/>
     </resources>
