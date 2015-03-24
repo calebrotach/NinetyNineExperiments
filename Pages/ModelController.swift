@@ -89,6 +89,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
 
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
+        if fromMenu == true {
         var index = self.indexOfViewController(viewController as DataViewController)
         if (index == NSNotFound) {
             return nil
@@ -99,6 +100,11 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         
         index--
         return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+        } else {
+            println("fromMenu is \(fromMenu)")
+            fromMenu = true
+            return self.viewControllerAtIndex(0, storyboard: viewController.storyboard!)
+        }
 
     }
     
@@ -124,7 +130,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             if index == self.experiments.count {
                 index = 0
             }
-//            println(experiments)
+
             return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
         } else {
             println("fromMenu is \(fromMenu)")
