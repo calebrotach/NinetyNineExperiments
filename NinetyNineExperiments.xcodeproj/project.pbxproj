@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590008D21AC2EA58005BABFA /* 99x---GIF.gif in Resources */ = {isa = PBXBuildFile; fileRef = 590008D11AC2EA58005BABFA /* 99x---GIF.gif */; };
 		59000B7F1AACFC93002EB1C4 /* AdditionalMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59000B7E1AACFC93002EB1C4 /* AdditionalMenuViewController.swift */; };
 		5930AD431A9A4372000061D2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930AD421A9A4372000061D2 /* MenuViewController.swift */; };
 		597B9E781A9562610017C13A /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597B9E771A9562610017C13A /* ModalView.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		590008D11AC2EA58005BABFA /* 99x---GIF.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "99x---GIF.gif"; sourceTree = "<group>"; };
 		59000B7E1AACFC93002EB1C4 /* AdditionalMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionalMenuViewController.swift; sourceTree = "<group>"; };
 		5930AD421A9A4372000061D2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		597B9E771A9562610017C13A /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				597B9E771A9562610017C13A /* ModalView.swift */,
 				A336A5F11A80C1480032E14E /* ModelController.swift */,
 				5985EF541A8A36DD00F48893 /* BR_left_line.png */,
+				590008D11AC2EA58005BABFA /* 99x---GIF.gif */,
 				5985EF551A8A36DD00F48893 /* BR_right_line.png */,
 				59D5BEF21ABE08DA00F75717 /* About_btn.png */,
 				59D5BEF31ABE08DA00F75717 /* Done_btn.png */,
@@ -178,6 +181,7 @@
 				A336A5F51A80C1480032E14E /* Main.storyboard in Resources */,
 				A336A5FA1A80C1480032E14E /* LaunchScreen.xib in Resources */,
 				5985EF5A1A8A36DD00F48893 /* TL_left_line.png in Resources */,
+				590008D21AC2EA58005BABFA /* 99x---GIF.gif in Resources */,
 				59D5BEF91ABE08DA00F75717 /* Reset_btn.png in Resources */,
 				A336A5F71A80C1480032E14E /* Images.xcassets in Resources */,
 				5985EF591A8A36DD00F48893 /* BR_right_line.png in Resources */,
