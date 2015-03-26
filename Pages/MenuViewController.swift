@@ -13,10 +13,6 @@ import UIKit
 
 var fromMenu = false
 
-protocol MenuViewControllerDelegate {
-    func didVisit(fromMenu: Bool)
-}
-
 class MenuViewController: UIViewController {
     
 
@@ -33,6 +29,7 @@ class MenuViewController: UIViewController {
         println("done")
     }
     
+        
     
 }
 
