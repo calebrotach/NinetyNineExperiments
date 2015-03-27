@@ -116,6 +116,32 @@
                                     </mask>
                                 </variation>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mc8-ph-1YM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="3eE-u6-cgs"/>
+                                    <constraint firstAttribute="height" constant="20" id="fze-Fu-1Pq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="DONE" backgroundImage="Done_btn">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3eE-u6-cgs"/>
+                                        <exclude reference="fze-Fu-1Pq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="3eE-u6-cgs"/>
+                                        <include reference="fze-Fu-1Pq"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="VNh-Nv-0Lf" kind="presentation" id="mce-oW-xeA"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4m-WQ-5WC">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
@@ -123,7 +149,7 @@
                                     <constraint firstAttribute="height" constant="20" id="ZrJ-OY-4YX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" title="HOME" backgroundImage="Home_btn.png">
+                                <state key="normal" title="HOME" backgroundImage="Home_btn">
                                     <color key="titleColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -141,32 +167,6 @@
                                 </variation>
                                 <connections>
                                     <segue destination="ySD-0M-FYj" kind="presentation" id="mID-oM-LvI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mc8-ph-1YM">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="3eE-u6-cgs"/>
-                                    <constraint firstAttribute="height" constant="20" id="fze-Fu-1Pq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" title="DONE" backgroundImage="Done_btn.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="3eE-u6-cgs"/>
-                                        <exclude reference="fze-Fu-1Pq"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="3eE-u6-cgs"/>
-                                        <include reference="fze-Fu-1Pq"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="VNh-Nv-0Lf" kind="presentation" id="mce-oW-xeA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -191,8 +191,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="X4m-WQ-5WC"/>
                                 <exclude reference="Mc8-ph-1YM"/>
+                                <exclude reference="X4m-WQ-5WC"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="ou4-x7-KuB"/>
@@ -214,8 +214,8 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="X4m-WQ-5WC"/>
                                 <include reference="Mc8-ph-1YM"/>
+                                <include reference="X4m-WQ-5WC"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="ou4-x7-KuB"/>
@@ -293,7 +293,7 @@
                                     <action selector="tweetButton:" destination="VNh-Nv-0Lf" eventType="touchUpInside" id="0wQ-Wu-wMv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5L-Oi-KRQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5L-Oi-KRQ">
                                 <rect key="frame" x="206" y="92" width="48" height="30"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -314,7 +314,7 @@
                                     <segue destination="ujE-lv-rhy" kind="unwind" unwindAction="removeExperimentSegue:" id="cZq-Lz-77b"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black_bar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jgd-fF-jNK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black_bar" translatesAutoresizingMaskIntoConstraints="NO" id="Jgd-fF-jNK">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="92" width="420" height="30"/>
@@ -331,7 +331,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbX-fg-emZ">
                                 <rect key="frame" x="206" y="92" width="48" height="30"/>
-                                <state key="normal" title="WAIT NO" backgroundImage="WAITNO_btn.png">
+                                <state key="normal" title="WAIT NO" backgroundImage="WAITNO_btn">
                                     <color key="titleColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -385,7 +385,7 @@
                                     <constraint firstAttribute="width" constant="150" id="YBD-1S-kGg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="ABOUT" backgroundImage="About_btn.png">
+                                <state key="normal" title="ABOUT" backgroundImage="About_btn">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -474,7 +474,7 @@
                                     <constraint firstAttribute="height" constant="40" id="r0E-tg-Iwj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="RESET" backgroundImage="Reset_btn.png">
+                                <state key="normal" title="RESET" backgroundImage="Reset_btn">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -629,8 +629,7 @@
                                         <exclude reference="W3W-5J-8Aw"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="247" y="622" width="1" height="50"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="W3W-5J-8Aw"/>
                                     </mask>
@@ -675,7 +674,7 @@
                                     <constraint firstAttribute="width" constant="150" id="s26-bd-afH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="ABOUT" backgroundImage="About_btn.png">
+                                <state key="normal" title="ABOUT" backgroundImage="About_btn">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -698,7 +697,7 @@
                                     <constraint firstAttribute="height" constant="40" id="jdN-Ti-fax"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="RESET" backgroundImage="Reset_btn.png">
+                                <state key="normal" title="RESET" backgroundImage="Reset_btn">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -726,9 +725,30 @@
                                     <rect key="frame" x="54" y="114" width="230" height="37"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animatedArrow_00000" translatesAutoresizingMaskIntoConstraints="NO" id="IET-4O-Psk">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="V3q-ta-UJT"/>
+                                    <constraint firstAttribute="width" constant="250" id="emf-WQ-Evy"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="V3q-ta-UJT"/>
+                                        <exclude reference="emf-WQ-Evy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="V3q-ta-UJT"/>
+                                        <include reference="emf-WQ-Evy"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UVQ-x2-5kI" firstAttribute="top" secondItem="IET-4O-Psk" secondAttribute="bottom" constant="150" id="1wF-XN-7SH"/>
                             <constraint firstItem="dlr-lh-WS3" firstAttribute="top" secondItem="Myv-Up-2s2" secondAttribute="bottom" constant="29" id="1wn-pZ-ibO"/>
                             <constraint firstItem="Zpo-8h-Lu6" firstAttribute="leading" secondItem="AEQ-Vh-ViF" secondAttribute="leadingMargin" constant="-65" id="9dv-Xq-Fjv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Myv-Up-2s2" secondAttribute="trailing" constant="62" id="FXZ-nx-mdB"/>
@@ -740,6 +760,7 @@
                             <constraint firstItem="Myv-Up-2s2" firstAttribute="top" secondItem="DkK-YG-f8X" secondAttribute="bottom" constant="120" id="Lyo-0e-VOU"/>
                             <constraint firstItem="edA-IF-r0S" firstAttribute="top" secondItem="TwI-lD-bNv" secondAttribute="bottom" constant="94" id="TAk-Hc-4Rx"/>
                             <constraint firstItem="DkK-YG-f8X" firstAttribute="top" secondItem="TwI-lD-bNv" secondAttribute="bottom" constant="94" id="b02-Jy-j5S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IET-4O-Psk" secondAttribute="trailing" constant="31" id="meP-QD-v2m"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DkK-YG-f8X" secondAttribute="trailing" constant="29" id="rIa-T3-lvC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dlr-lh-WS3" secondAttribute="trailing" constant="62" id="uTX-7q-gYq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="edA-IF-r0S" secondAttribute="trailing" constant="-75" id="yG1-io-7hQ"/>
@@ -752,6 +773,7 @@
                                 <exclude reference="edA-IF-r0S"/>
                                 <exclude reference="Myv-Up-2s2"/>
                                 <exclude reference="dlr-lh-WS3"/>
+                                <exclude reference="IET-4O-Psk"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="b02-Jy-j5S"/>
@@ -764,9 +786,11 @@
                                 <exclude reference="uTX-7q-gYq"/>
                                 <exclude reference="TAk-Hc-4Rx"/>
                                 <exclude reference="yG1-io-7hQ"/>
+                                <exclude reference="meP-QD-v2m"/>
                                 <exclude reference="9dv-Xq-Fjv"/>
                                 <exclude reference="I1U-Bc-Xeo"/>
                                 <exclude reference="Isk-Kx-dxH"/>
+                                <exclude reference="1wF-XN-7SH"/>
                                 <exclude reference="Kuo-gM-Eqa"/>
                             </mask>
                         </variation>
@@ -778,6 +802,7 @@
                                 <include reference="edA-IF-r0S"/>
                                 <include reference="Myv-Up-2s2"/>
                                 <include reference="dlr-lh-WS3"/>
+                                <include reference="IET-4O-Psk"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="b02-Jy-j5S"/>
@@ -790,15 +815,20 @@
                                 <include reference="uTX-7q-gYq"/>
                                 <include reference="TAk-Hc-4Rx"/>
                                 <include reference="yG1-io-7hQ"/>
+                                <include reference="meP-QD-v2m"/>
                                 <include reference="9dv-Xq-Fjv"/>
                                 <include reference="I1U-Bc-Xeo"/>
                                 <include reference="Isk-Kx-dxH"/>
+                                <include reference="1wF-XN-7SH"/>
                                 <include reference="Kuo-gM-Eqa"/>
                             </mask>
                         </variation>
                     </view>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="arrowGif" destination="IET-4O-Psk" id="g9Q-cd-efM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNO-N1-ClK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -806,15 +836,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="About_btn.png" width="263" height="70"/>
+        <image name="About_btn" width="263" height="70"/>
         <image name="BR_left_line.png" width="71" height="2"/>
         <image name="BR_right_line.png" width="2" height="58"/>
-        <image name="Done_btn.png" width="153" height="41"/>
-        <image name="Home_btn.png" width="154" height="41"/>
-        <image name="Reset_btn.png" width="263" height="70"/>
+        <image name="Done_btn" width="153" height="41"/>
+        <image name="Home_btn" width="154" height="41"/>
+        <image name="Reset_btn" width="263" height="70"/>
         <image name="TL_left_line.png" width="71" height="2"/>
         <image name="TL_right_line.png" width="2" height="58"/>
-        <image name="WAITNO_btn.png" width="263" height="70"/>
-        <image name="black_bar.png" width="640" height="52"/>
+        <image name="WAITNO_btn" width="263" height="70"/>
+        <image name="animatedArrow_00000" width="436" height="95"/>
+        <image name="black_bar" width="640" height="52"/>
     </resources>
 </document>
