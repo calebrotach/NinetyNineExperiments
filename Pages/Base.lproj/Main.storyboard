@@ -187,7 +187,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="NlB-Cl-4z0" secondAttribute="trailing" constant="-77" id="sjr-l5-Rfq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gj0-uO-CUC" secondAttribute="trailing" constant="59" id="tMu-CH-OTL"/>
                             <constraint firstItem="35v-Ux-YPo" firstAttribute="top" secondItem="gLe-Tb-ylt" secondAttribute="topMargin" constant="-21" id="yAQ-xf-WPY"/>
-                            <constraint firstItem="X4m-WQ-5WC" firstAttribute="leading" secondItem="gLe-Tb-ylt" secondAttribute="leadingMargin" constant="34" id="zbC-Id-MCy"/>
+                            <constraint firstItem="X4m-WQ-5WC" firstAttribute="leading" secondItem="gLe-Tb-ylt" secondAttribute="leadingMargin" constant="25" id="zbC-Id-MCy"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">

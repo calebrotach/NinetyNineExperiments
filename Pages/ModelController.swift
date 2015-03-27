@@ -119,9 +119,13 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             }
             if removeExperiment == true {
                 if index == 0 {
+                    print(experiments.count-1)
                     experiments.removeObjectAtIndex(experiments.count - 1)
+                    print(experiments)
                 } else {
+                    println(index)
                     experiments.removeObjectAtIndex(index)
+                    println(experiments)
                 }
                 removeExperiment = false
             }
