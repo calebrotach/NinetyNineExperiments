@@ -30,11 +30,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             }
         }
         
-        println(experiments)
-        
         shuffleArray(&experiments)
-        
-        println(experiments)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetArray", name: mySpecialNotificationKey, object: nil)
     }
@@ -47,7 +43,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             }
         }
         shuffleArray(&experiments)
-        println(experiments)
+     
     }
     
     func indexOfViewController(viewController: DataViewController) -> Int {
@@ -119,13 +115,13 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             }
             if removeExperiment == true {
                 if index == 0 {
-                    print(experiments.count-1)
+
                     experiments.removeObjectAtIndex(experiments.count - 1)
-                    print(experiments)
+
                 } else {
-                    println(index)
+
                     experiments.removeObjectAtIndex(index)
-                    println(experiments)
+
                 }
                 removeExperiment = false
             }

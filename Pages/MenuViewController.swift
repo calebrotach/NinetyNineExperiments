@@ -43,6 +43,11 @@ class MenuViewController: UIViewController {
         println("done")
     }
     
+    @IBAction func closeAbout(segue:UIStoryboardSegue) {
+        
+    }
+
+    
         
     
 }

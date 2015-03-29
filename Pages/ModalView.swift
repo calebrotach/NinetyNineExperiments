@@ -15,7 +15,7 @@ class ModalView: UIViewController {
     @IBAction func tweetButton(sender: AnyObject) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
             var twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            twitterSheet.setInitialText("Share on Twitter")
+            twitterSheet.setInitialText("@revolver_cares ")
             self.presentViewController(twitterSheet, animated: true, completion: nil)
         } else {
             var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)

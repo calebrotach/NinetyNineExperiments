@@ -28,6 +28,11 @@ class AdditionalMenuViewController: UIViewController {
         println("done")
     }
     
+    @IBAction func closeAdditionalMenu(segue:UIStoryboardSegue) {
+        
+    }
+
+    
     
 }
 
