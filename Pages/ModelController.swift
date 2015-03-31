@@ -13,7 +13,6 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             var j = Int(arc4random_uniform(UInt32(index-1)))
             
             // Swap two array elements
-            // Notice '&' required as swap uses 'inout' parameters
             swap(&array[index], &array[j])
         }
         return array

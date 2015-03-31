@@ -21,28 +21,16 @@ class DataViewController: UIViewController {
         
     }
     
-    @IBAction func removeExperimentSegue(segue:UIStoryboardSegue) {
-        
+    @IBAction func removeExperimentSegue(unwindSegue:UIStoryboardSegue) {
         removeExperiment = true
+//        titleLabel.text = "Done"
+//        bodyLabel.text = "Done"
         
     }
     
     @IBAction func closeMenu(segue:UIStoryboardSegue) {
         
     }
-
-    
-    
-    
-
-    
-    
-    
-  
-    
-    
-    
-    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)        
@@ -59,8 +47,5 @@ class DataViewController: UIViewController {
         }
         
         println(removeExperiment)
-        
-        
     }
-
 }
