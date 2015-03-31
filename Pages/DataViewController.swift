@@ -24,9 +24,6 @@ class DataViewController: UIViewController {
     
     @IBAction func removeExperimentSegue(unwindSegue:UIStoryboardSegue) {
         removeExperiment = true
-//        titleLabel.text = "Done"
-//        bodyLabel.text = "Done"
-        
     }
     
     @IBAction func closeMenu(segue:UIStoryboardSegue) {

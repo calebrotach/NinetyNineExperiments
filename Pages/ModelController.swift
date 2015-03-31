@@ -109,7 +109,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         
         if fromMenu == true {
-            var index = self.indexOfViewController(viewController as DataViewController)
+            var index = self.indexOfViewController(viewController)
             if index == NSNotFound {
                 index = 0
             }

@@ -832,11 +832,11 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asI-NR-wGw">
                                 <rect key="frame" x="206" y="224" width="153" height="30"/>
                                 <fontDescription key="fontDescription" name="Marion-Regular" family="Marion" pointSize="15"/>
-                                <state key="normal" title="Tell us how it went">
+                                <state key="normal" title="How did it go? Tweet at us">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="54" y="655" width="180" height="30"/>
+                                    <rect key="frame" x="54" y="655" width="186" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="tweetButton:" destination="VNh-Nv-0Lf" eventType="touchUpInside" id="0wQ-Wu-wMv"/>
@@ -849,7 +849,7 @@
                             <constraint firstItem="ZgG-bu-g3Z" firstAttribute="top" secondItem="bbX-fg-emZ" secondAttribute="bottom" constant="26" id="I28-ob-lU5"/>
                             <constraint firstItem="G8d-So-P8f" firstAttribute="top" secondItem="FmO-NN-4st" secondAttribute="bottom" constant="27" id="I3h-61-mUn"/>
                             <constraint firstItem="ZA6-dT-X9n" firstAttribute="top" secondItem="ZgG-bu-g3Z" secondAttribute="bottom" constant="103" id="JZy-xs-qh7"/>
-                            <constraint firstItem="asI-NR-wGw" firstAttribute="top" secondItem="ZgG-bu-g3Z" secondAttribute="bottom" constant="6" id="OXs-OQ-xMb"/>
+                            <constraint firstItem="asI-NR-wGw" firstAttribute="top" secondItem="ZgG-bu-g3Z" secondAttribute="bottom" constant="16" id="OXs-OQ-xMb"/>
                             <constraint firstItem="bbX-fg-emZ" firstAttribute="leading" secondItem="iff-ss-2L4" secondAttribute="leadingMargin" constant="38" id="Vw5-Lx-YZB"/>
                             <constraint firstItem="ZgG-bu-g3Z" firstAttribute="leading" secondItem="iff-ss-2L4" secondAttribute="leadingMargin" constant="38" id="XiI-rb-egS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="k5L-Oi-KRQ" secondAttribute="trailing" constant="29" id="fiL-TR-e7i"/>
