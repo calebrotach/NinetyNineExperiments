@@ -86,22 +86,30 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
         if fromMenu == true {
-        var index = self.indexOfViewController(viewController)
-        if (index == NSNotFound) {
-            return nil
-        }
-        if (index == 0) {
-            index = experiments.count - 1
-        }
-        
-        index--
-        return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
+            var index = self.indexOfViewController(viewController)
+            if (index == 0) || (index == NSNotFound) {
+                return nil
+            }
+            if removeExperiment == true {
+                if index == 0 {
+                    
+                    experiments.removeObjectAtIndex(experiments.count + 1)
+                    
+                } else {
+                    
+                    experiments.removeObjectAtIndex(index)
+                    
+                }
+                removeExperiment = false
+            }
+            
+            index--
+            return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)
         } else {
             println("fromMenu is \(fromMenu)")
             fromMenu = true
             return self.viewControllerAtIndex(0, storyboard: viewController.storyboard!)
         }
-
     }
     
     
