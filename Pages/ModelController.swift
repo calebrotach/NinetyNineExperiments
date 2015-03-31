@@ -45,14 +45,15 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
      
     }
     
-    func indexOfViewController(viewController: DataViewController) -> Int {
+    func indexOfViewController(viewController: UIViewController) -> Int {
         // Return the index of the given data view controller.
         // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
-        if let experiment: AnyObject = viewController.experiment {
-            return self.experiments.indexOfObject(experiment)
-        } else {
-            return NSNotFound
+        if let dataViewController = viewController as? DataViewController {
+            if let experiment: AnyObject = dataViewController.experiment {
+                return self.experiments.indexOfObject(experiment)
+            }
         }
+        return NSNotFound
     }
 
     
@@ -85,7 +86,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
         if fromMenu == true {
-        var index = self.indexOfViewController(viewController as DataViewController)
+        var index = self.indexOfViewController(viewController)
         if (index == NSNotFound) {
             return nil
         }
