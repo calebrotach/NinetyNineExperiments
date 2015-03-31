@@ -781,6 +781,29 @@
                                     <segue destination="ujE-lv-rhy" kind="unwind" unwindAction="removeExperimentSegue:" id="cZq-Lz-77b"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Are you sure that you're done? You'll have to hit the Reset button to see this experiment again. " translatesAutoresizingMaskIntoConstraints="NO" id="G8d-So-P8f">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="214" id="8lD-wC-69N"/>
+                                    <constraint firstAttribute="height" constant="128" id="ehx-SC-0fn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Marion-Regular" family="Marion" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8lD-wC-69N"/>
+                                        <exclude reference="ehx-SC-0fn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="51" y="167" width="214" height="118"/>
+                                    <mask key="constraints">
+                                        <include reference="8lD-wC-69N"/>
+                                        <include reference="ehx-SC-0fn"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbX-fg-emZ">
                                 <rect key="frame" x="206" y="92" width="48" height="30"/>
                                 <constraints>
@@ -807,28 +830,6 @@
                                     <segue destination="ujE-lv-rhy" kind="unwind" unwindAction="closeMenu:" id="c7X-Gy-EKZ"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Are you sure that you're done? You'll have to hit the Reset button to see this experiment again. " translatesAutoresizingMaskIntoConstraints="NO" id="G8d-So-P8f">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="214" id="8lD-wC-69N"/>
-                                    <constraint firstAttribute="height" constant="128" id="ehx-SC-0fn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Marion-Regular" family="Marion" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8lD-wC-69N"/>
-                                        <exclude reference="ehx-SC-0fn"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="8lD-wC-69N"/>
-                                        <include reference="ehx-SC-0fn"/>
-                                    </mask>
-                                </variation>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asI-NR-wGw">
                                 <rect key="frame" x="206" y="224" width="153" height="30"/>
                                 <fontDescription key="fontDescription" name="Marion-Regular" family="Marion" pointSize="15"/>
@@ -845,7 +846,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Jgd-fF-jNK" firstAttribute="top" secondItem="57i-Jn-wbZ" secondAttribute="bottom" constant="90" id="5dS-Qx-fuA"/>
+                            <constraint firstItem="Jgd-fF-jNK" firstAttribute="top" secondItem="57i-Jn-wbZ" secondAttribute="bottom" constant="79" id="5dS-Qx-fuA"/>
                             <constraint firstItem="ZgG-bu-g3Z" firstAttribute="top" secondItem="bbX-fg-emZ" secondAttribute="bottom" constant="26" id="I28-ob-lU5"/>
                             <constraint firstItem="G8d-So-P8f" firstAttribute="top" secondItem="FmO-NN-4st" secondAttribute="bottom" constant="27" id="I3h-61-mUn"/>
                             <constraint firstItem="ZA6-dT-X9n" firstAttribute="top" secondItem="ZgG-bu-g3Z" secondAttribute="bottom" constant="103" id="JZy-xs-qh7"/>
@@ -854,8 +855,8 @@
                             <constraint firstItem="ZgG-bu-g3Z" firstAttribute="leading" secondItem="iff-ss-2L4" secondAttribute="leadingMargin" constant="38" id="XiI-rb-egS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="k5L-Oi-KRQ" secondAttribute="trailing" constant="29" id="fiL-TR-e7i"/>
                             <constraint firstItem="FmO-NN-4st" firstAttribute="leading" secondItem="iff-ss-2L4" secondAttribute="leadingMargin" constant="38" id="j3k-Gw-cDW"/>
-                            <constraint firstItem="FmO-NN-4st" firstAttribute="top" secondItem="57i-Jn-wbZ" secondAttribute="bottom" constant="90" id="k9g-Oz-6xI"/>
-                            <constraint firstItem="k5L-Oi-KRQ" firstAttribute="top" secondItem="57i-Jn-wbZ" secondAttribute="bottom" constant="84" id="o4x-4f-BYY"/>
+                            <constraint firstItem="FmO-NN-4st" firstAttribute="top" secondItem="57i-Jn-wbZ" secondAttribute="bottom" constant="79" id="k9g-Oz-6xI"/>
+                            <constraint firstItem="k5L-Oi-KRQ" firstAttribute="top" secondItem="57i-Jn-wbZ" secondAttribute="bottom" constant="73" id="o4x-4f-BYY"/>
                             <constraint firstItem="ZgG-bu-g3Z" firstAttribute="centerX" secondItem="asI-NR-wGw" secondAttribute="centerX" id="oVb-j5-iOV"/>
                             <constraint firstItem="G8d-So-P8f" firstAttribute="leading" secondItem="iff-ss-2L4" secondAttribute="leadingMargin" constant="35" id="ogX-Y7-xR1"/>
                         </constraints>
@@ -1267,7 +1268,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animatedArrow_00000" translatesAutoresizingMaskIntoConstraints="NO" id="IET-4O-Psk">
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animatedArrow_00000" translatesAutoresizingMaskIntoConstraints="NO" id="IET-4O-Psk">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>

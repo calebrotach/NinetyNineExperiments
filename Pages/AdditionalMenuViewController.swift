@@ -18,6 +18,10 @@ class AdditionalMenuViewController: UIViewController {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetArray", name: mySpecialNotificationKey, object: nil)
     }
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+
     
 
     @IBAction func notify(){
