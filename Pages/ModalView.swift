@@ -12,6 +12,8 @@ import Social
 class ModalView: UIViewController {
     
     
+    
+    
     @IBAction func tweetButton(sender: AnyObject) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
             var twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)

@@ -16,6 +16,7 @@ class DataViewController: UIViewController {
     @IBOutlet weak var brRightLine: UIImageView!
     @IBOutlet weak var brLeftLine: UIImageView!
     
+    @IBOutlet weak var doneLabel: UITextView!
     @IBOutlet weak var bodyTest: UITextView!
     @IBAction func closeModal(segue:UIStoryboardSegue) {
         
@@ -32,6 +33,11 @@ class DataViewController: UIViewController {
         
     }
     
+    @IBAction func closeFromX(segue:UIStoryboardSegue) {
+        
+    }
+
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)        
         if let dict: NSDictionary = experiment {
@@ -44,6 +50,10 @@ class DataViewController: UIViewController {
         } else {
             self.titleLabel!.text = ""
             self.bodyLabel!.text = ""
+        }
+        
+        if removeExperiment == true {
+            doneLabel.text = "You've completed this experiment. You won't see it again unless you hit 'Reset' from the Home menu."
         }
         
         println(removeExperiment)
