@@ -13,6 +13,7 @@ let mySpecialNotificationKey = "com.example.specialNotificationKey"
 
 class AdditionalMenuViewController: UIViewController {
     
+    @IBOutlet weak var resetText: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,11 @@ class AdditionalMenuViewController: UIViewController {
         return true
     }
 
+    @IBAction func resetAll(sender: AnyObject) {
+        
+        resetText.text = "The experiments have been reset. Tap the 'X' to continue."
+        
+    }
     
 
     @IBAction func notify(){

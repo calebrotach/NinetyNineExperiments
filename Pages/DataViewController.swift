@@ -2,6 +2,8 @@ import UIKit
 
 var removeExperiment = false
 
+var resetAll = false
+
 
 
 class DataViewController: UIViewController {
@@ -22,9 +24,18 @@ class DataViewController: UIViewController {
         
     }
     
+    @IBAction func resetExperiments(unwindSegue:UIStoryboardSegue) {
+        
+        resetAll = true
+        
+    }
+
+    
     @IBAction func removeExperimentSegue(unwindSegue:UIStoryboardSegue) {
         removeExperiment = true
     }
+    
+    
     
     @IBAction func closeMenu(segue:UIStoryboardSegue) {
         
@@ -53,6 +64,10 @@ class DataViewController: UIViewController {
             doneLabel.text = "You've completed this experiment. You won't see it again unless you hit 'Reset' from the Home menu."
         }
         
-        println(removeExperiment)
+        if resetAll == true {
+            "Your experiments have been reset."
+        }
+        
+        
     }
 }

@@ -30,9 +30,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "6"
-            endingLineNumber = "6"
-            landmarkName = "DataViewController"
-            landmarkType = "3">
+            endingLineNumber = "6">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
